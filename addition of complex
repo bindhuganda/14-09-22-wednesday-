@@ -1,0 +1,42 @@
+#include<stdio.h>
+typedef struct complex{
+   float real;
+   float imag;
+} complex;
+complex addition(complex num1, complex num2);
+int main(){
+   complex num1, num2, value;
+   printf("entering real and imag parts of first complex no:\n ");
+   scanf("%f %f", &num1.real, &num1.imag);
+   printf("entering real and imag parts of second complex no:\n ");
+   scanf("%f %f", &num2.real, &num2.imag);
+   value= addition(num1, num2);
+   printf("result = %.1f + %.1fi", value.real, value.imag);
+   return 0;
+}
+complex addition(complex num1, complex num2){
+   complex temp;
+   temp.real = num1.real + num2.real;
+   temp.imag = num1.imag + num2.imag;
+   return (temp);
+}
+
+
+    
+    
+    
+    SAMPLE OUTPUT
+  entering real and imag parts of first complex no:
+ 2
+3
+entering real and imag parts of second complex no:
+ 4
+5
+result = 6.0 + 8.0i
+
+TEST CASES
+2+5i, a+4i
+3+6i. 6+4i
+8+4i.12+7i
+15-4i. 6-2i
+3-8i.18-6i
